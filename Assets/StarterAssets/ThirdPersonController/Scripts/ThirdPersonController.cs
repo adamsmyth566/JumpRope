@@ -388,5 +388,16 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.tag == "Rope")
+            Debug.Log("Rope Hit");
+            Destroy(this.gameObject);
+        }
+
     }
+
+    
+            
 }
