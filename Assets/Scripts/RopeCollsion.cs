@@ -39,7 +39,7 @@ public class RopeCollsion : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Rope Hit");
+        Debug.Log("Player DEAD");
         Destroy(this.gameObject);
     }
 
