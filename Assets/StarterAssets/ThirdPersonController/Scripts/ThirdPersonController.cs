@@ -388,12 +388,6 @@ namespace StarterAssets
             }
         }
 
-        private void OnCollisionEnter(Collision collision)
-        {
-            if(collision.gameObject.tag == "Rope")
-            Debug.Log("Rope Hit");
-            Destroy(this.gameObject);
-        }
 
     }
 
