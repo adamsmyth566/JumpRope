@@ -3,25 +3,9 @@ using System.Collections;
 
 public class RopeCollsion : MonoBehaviour
 {
-    //// Start is called once before the first execution of Update after the MonoBehaviour is created
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("rope collison" + collision.transform.name);
-    //    if (collision.gameObject.tag == "Rope")
-    //        Debug.Log("Rope Hit");
-    //    Destroy(this.gameObject);
-    //}
+    private bool isDead;
 
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("rope collison : " + collision.transform.name);
-
-    //    if (collision.gameObject.tag == "Rope")
-    //    {
-    //        Debug.Log("Rope Hit");
-    //        Destroy(this.gameObject);
-    //    }
-    //}
+    public GameManager gameManager;
 
     void OnTriggerEnter(Collider other)
     {
@@ -41,6 +25,9 @@ public class RopeCollsion : MonoBehaviour
 
         Debug.Log("Player DEAD");
         Destroy(this.gameObject);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        gameManager.gameOver();
     }
 
 }

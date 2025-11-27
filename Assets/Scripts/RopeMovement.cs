@@ -6,7 +6,7 @@ public class RopeMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.RotateAround(target.position, Vector3.forward, 150 * Time.deltaTime); 
+        transform.RotateAround(target.position, Vector3.forward, 170 * Time.deltaTime); 
 
     }
 }
