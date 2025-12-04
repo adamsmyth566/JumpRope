@@ -24,7 +24,7 @@ public class RopeCollsion : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         Debug.Log("Player DEAD");
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         gameManager.gameOver();

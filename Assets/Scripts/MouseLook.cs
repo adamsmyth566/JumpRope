@@ -27,7 +27,7 @@ public class MouseLook : MonoBehaviour
     private Vector2 lastInputEvent;
     private float inputLagTimer;
 
-    private void OnEnable()
+    private void Start()
     {
         velocity = Vector2.zero;
         inputLagTimer = 0;
